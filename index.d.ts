@@ -9,8 +9,8 @@ declare class signalrClient {
      */
     constructor(url: string, hubs: string[]);
     url: string;
-    qs: {};
-    headers: {};
+    qs: any;
+    headers: any;
     agent: boolean;
     reconnectDelayTime: number;
     requestTimeout: number;
@@ -47,6 +47,7 @@ declare class signalrClient {
     start(): void;
     request: any;
     end(): void;
+    on(name: string, any): void;
 }
 declare namespace errorCode {
     const invalidURL: string;
